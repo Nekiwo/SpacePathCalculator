@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
-        "sourceMap": true
+        "removeComments": true,
+        "sourceMap": true,
+        "outDir": "build"
     }
 }
