@@ -1,0 +1,9 @@
+{
+    "name": "spacepathcalculator",
+    "devDependencies": {
+        "browserify": "latest"
+    },
+    "scripts": {
+        "build": "tsc src/index --outDir 'build' \n browserify build/index.js -o build/index.js"
+    }
+}
