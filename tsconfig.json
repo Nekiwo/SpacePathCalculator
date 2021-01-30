@@ -3,6 +3,7 @@
         "target": "es5",
         "removeComments": true,
         "sourceMap": true,
-        "outDir": "build"
+        "outDir": "build",
+        "module": "commonjs"
     }
 }
