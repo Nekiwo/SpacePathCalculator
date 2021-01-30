@@ -1,11 +1,10 @@
+// NOTE: All functions with more than 1 argument are using one JSON tree as one argument so its easier to understand and see what items are used
+
+
 // importing classes and etc.
 import {Planet} from "./classes/Planet";
 
-// initial variables and classes
-
-
 // all planets in one array
-// using JSON as one argument so its easier to understand
 var planets:Planet[] = [
     new Planet({
         name: "Mercury",
