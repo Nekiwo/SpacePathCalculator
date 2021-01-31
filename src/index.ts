@@ -3,13 +3,17 @@
 
 // importing classes and etc.
 import {Planet} from "./classes/Planet";
-import {DrawPath} from "./functions/DrawPath";
 
 // all planets in one array
-var planets:Planet[] = [
+
+// NOTE: radius of planets is written in km
+// ANOTHER NOTE: radius of planet's sun orbit is written in millions of km
+// ANOTHER ANOTHER NOTE: mass of planets is written in 10^24kg
+export var planets:Planet[] = [
     new Planet({
         name: "Mercury",
         radius: 2439,
+        mass: 0.33,
         euler: {
             x: 0,
             y: 0,
@@ -22,6 +26,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Venus",
         radius: 6502,
+        mass: 4.87,
         euler: {
             x: 0,
             y: 0,
@@ -34,6 +39,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Earth",
         radius: 6378,
+        mass: 5.97,
         euler: {
             x: 0,
             y: 0,
@@ -46,6 +52,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Mars",
         radius: 3396,
+        mass: 0.642,
         euler: {
             x: 0,
             y: 0,
@@ -58,6 +65,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Jupiter",
         radius: 71492,
+        mass: 1898,
         euler: {
             x: 0,
             y: 0,
@@ -70,6 +78,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Saturn",
         radius: 60268,
+        mass: 568,
         euler: {
             x: 0,
             y: 0,
@@ -82,6 +91,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Uranus",
         radius: 25559,
+        mass: 86.8,
         euler: {
             x: 0,
             y: 0,
@@ -94,6 +104,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Neptune",
         radius: 24764,
+        mass: 102,
         euler: {
             x: 0,
             y: 0,
@@ -106,6 +117,7 @@ var planets:Planet[] = [
     new Planet({
         name: "Pluto",
         radius: 1185,
+        mass: 0.0146,
         euler: {
             x: 0,
             y: 0,
