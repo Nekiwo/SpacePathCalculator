@@ -12,7 +12,6 @@ export class Planet {
     RadiusFromSun: number;
     SunDeg: number;
     constructor(args?: any) {
-        // initiate each planet
         this.name = args.name;
         this.radius = args.radius;
         this.mass = args.mass;
@@ -20,6 +19,7 @@ export class Planet {
         this.model = args.model;
         this.RadiusFromSun = args.RadiusFromSun;
         this.SunDeg = args.SunDeg;
+        // initiate each planet
 
         // draw first frame
         this.DrawPlanet({
@@ -37,11 +37,16 @@ export class Planet {
         let circum:CanvasRenderingContext2D = canvas.getContext("2d");
         
         circum.beginPath();
-        circum.arc(500, 500, this.RadiusFromSun / 20, 0, 2 * Math.PI);
+        circum.arc(1500, 1500, this.RadiusFromSun / 5, 0, 2 * Math.PI);
         circum.stroke();
+
+        planet.fillStyle = "#ff0000";
+        planet.beginPath();
+        planet.arc(1500, this.RadiusFromSun / 5 + 1500, 5, 0, 2 * Math.PI);
+        planet.fill();
     }
     ChangePlanetPos = (args: any) => {
         // Change planet position through degrees on its circumference around the sun
-
+        
     }
 }
