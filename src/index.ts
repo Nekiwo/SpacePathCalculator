@@ -11,6 +11,19 @@ import {Planet} from "./classes/Planet";
 // ANOTHER ANOTHER NOTE: mass of planets is written in 10^24kg
 export var planets:Planet[] = [
     new Planet({
+        name: "Sun",
+        radius: 696340000,
+        mass: 1988500,
+        euler: {
+            x: 0,
+            y: 0,
+            z: 0
+        },
+        model: "",
+        RadiusFromSun: 0,
+        SunDeg: 0
+    }),
+    new Planet({
         name: "Mercury",
         radius: 2439,
         mass: 0.33,
