@@ -1,8 +1,9 @@
 # SpacePathCalculator
-One part of my bigger TS project
+A TypeScript project that determines the most optimal path for space travel between planets<br/>
+This open source repo is a part of my bigger peoject I am planning to host on my website
 
 ## Important
-Currently this project is not completed, meaning its abosulutely useless. When its done, I will add more info.
+Currently this project is not completed
 ## Build Dependencies
 - browserify
 - TypeScript
