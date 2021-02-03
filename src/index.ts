@@ -3,6 +3,8 @@
 
 // importing classes and etc.
 import {Planet} from "./classes/Planet";
+import {ConfigPrompt} from "./functions/ConfigPrompt";
+import {DrawPath} from "./functions/DrawPath";
 
 // all planets in one array
 
@@ -92,9 +94,7 @@ export var planets:Planet[] = [
     })
 ];
 
-// just a quick test
-var deg: number = 0;
-setInterval(() => {
-    planets[7].DrawPlanet(deg);
-    deg++;
-}, 16)
+ConfigPrompt().then(config => {
+    // Do something when user got prompted about the config
+    DrawPath(config);
+})
