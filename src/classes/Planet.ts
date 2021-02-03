@@ -6,6 +6,8 @@ export class Planet {
     model: string;
     RadiusFromSun: number;
     SunDeg: number;
+    x: number;
+    y: number;
     constructor(args?: any) {
         this.name = args.name;
         this.radius = args.radius;
@@ -13,6 +15,8 @@ export class Planet {
         this.model = args.model;
         this.RadiusFromSun = args.RadiusFromSun;
         this.SunDeg = args.SunDeg;
+        this.x = 1500 + (this.RadiusFromSun / 5) * Math.cos((this.SunDeg - 90) * (Math.PI/180));
+        this.y = 1500 + (this.RadiusFromSun / 5) * Math.sin((this.SunDeg - 90) * (Math.PI/180));
         // initiate each planet
 
         // draw first frame
