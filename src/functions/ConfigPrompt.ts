@@ -2,5 +2,6 @@
 export var ConfigPrompt = async (): Promise<void> => {
     const result: any = {};
     result.planet = prompt("Choose planet to go to from 1 to 9");
+    result.type = prompt("type 0 if you want to go to the planet now, or type 1 if you can wait until the planets align perfectly");
     return Promise.resolve(result);
 }
