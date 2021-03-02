@@ -24,7 +24,10 @@ export class Planet {
     }
     DrawPlanet: Function = (SunDeg: number) => {
         // Draw each planet and path on a canvas element for purely testing/showcase purposes
+        // This implemintation does not erase previous frames, and has many other impurities
+
         // If you want to change the way planets are rendered, for example impliment it all in WebGL, you can do it here
+
         let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
         
         let planet:CanvasRenderingContext2D = canvas.getContext("2d");
