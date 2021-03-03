@@ -5,6 +5,7 @@
 import {Planet} from "./classes/Planet";
 import {ConfigPrompt} from "./functions/ConfigPrompt";
 import {DrawPath} from "./functions/DrawPath";
+import {CalcTime} from "./functions/CalcTime";
 
 // all planets in one array
 
