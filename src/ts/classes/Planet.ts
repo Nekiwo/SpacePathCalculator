@@ -1,4 +1,7 @@
 // Planet class for each planet
+
+// https://solarsystem.nasa.gov/planets/overview/
+// pls edit classs
 export class Planet {
     name: string;
     radius: number;
