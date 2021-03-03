@@ -1,4 +1,5 @@
 import {planets} from "..";
+import {CalcTime} from "./CalcTime";
 
 var BelzierCurve: Function = (args: any) => {
 
@@ -22,17 +23,24 @@ export var DrawPath: Function = (args: any) => {
     } else {
         // Change planet positions to a straight line
         let EarthDeg: number = planets[3].SunDeg;
-        for (let i: number = 1; i <= args.planet; i++) {
-            planets[i].DrawPlanet(EarthDeg);
+        if (args.planet > 3) {
+            for (let i: number = 3; i <= args.planet; i++) {
+                planets[i].DrawPlanet(EarthDeg);
+            }
+        } else {
+            for (let i: number = 1; i <= args.planet; i++) {
+                planets[i].DrawPlanet(EarthDeg);
+            }
         }
+       
 
         // Convert planet list to point list
-        WrapPlanets.forEach(element => {
+        WrapPlanets.forEach((element: any) => {
             
         });
 
         // Draw belzier curves around each point
-        WrapPoints.forEach(element => {
+        WrapPoints.forEach((element: any) => {
             BelzierCurve();
         });
     }
