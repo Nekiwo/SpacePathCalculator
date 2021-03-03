@@ -97,5 +97,4 @@ export var planets:Planet[] = [
 ConfigPrompt.then((config: any) => {
     // Do something when user got prompted about the config
     DrawPath(config);
-    console.log("test last")
 })

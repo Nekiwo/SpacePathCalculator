@@ -20,15 +20,12 @@ export var DrawPath: Function = (args: any) => {
     if (args.type === 0) {
         
     } else {
-        console.log("test 1")
         // Change planet positions to a straight line
         let EarthDeg: number = planets[3].SunDeg;
         for (let i: number = 1; i <= args.planet; i++) {
-            console.log("test 2:" + i)
             planets[i].DrawPlanet(EarthDeg);
         }
 
-        console.log("test 3")
         // Convert planet list to point list
         WrapPlanets.forEach(element => {
             
