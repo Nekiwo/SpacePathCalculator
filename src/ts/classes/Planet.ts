@@ -23,17 +23,18 @@ export class Planet {
         this.DrawPlanet(this.SunDeg);
     }
     DrawPlanet: Function = (SunDeg: number) => {
+        this.SunDeg = SunDeg;
+        
         // Draw each planet and path on a canvas element for purely testing/showcase purposes
         // This implemintation does not erase previous frames, and has many other impurities
 
         // If you want to change the way planets are rendered, for example impliment it all in WebGL, you can do it here
 
-        let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
+        var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
         
-        let planet:CanvasRenderingContext2D = canvas.getContext("2d");
-        let circum:CanvasRenderingContext2D = canvas.getContext("2d");
+        var planet:CanvasRenderingContext2D = canvas.getContext("2d");
+        var circum:CanvasRenderingContext2D = canvas.getContext("2d");
         
-
         var ConvertedRadius: number = this.RadiusFromSun / 5;
         circum.beginPath();
         circum.arc(1500, 1500, ConvertedRadius, 0, 2 * Math.PI);
