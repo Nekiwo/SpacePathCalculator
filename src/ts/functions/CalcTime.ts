@@ -1,4 +1,4 @@
 // Calculate time when the planets align
-export var CalcTime: Function = (args: any) => {
+export var CalcTime: Function = (planet: number) => {
 
 }
