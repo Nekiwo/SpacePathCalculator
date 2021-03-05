@@ -22,6 +22,7 @@ export var DrawPath: Function = (args: any) => {
         
     } else {
         // Change planet positions to a straight line
+        CalcTime(args.planet);
         let EarthDeg: number = planets[3].SunDeg;
         if (args.planet > 3) {
             for (let i: number = 3; i <= args.planet; i++) {
