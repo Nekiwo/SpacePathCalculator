@@ -7,19 +7,33 @@ export class Planet {
     radius: number;
     mass: number;
     model: string;
-    RadiusFromSun: number;
     SunDeg: number;
     x: number;
-    y: number;
+    z: number;
+    XRadius: number;
+    ZRadius: number;
+    XTilt: number;
+    ZTilt: number;
     constructor(args?: any) {
         this.name = args.name;
         this.radius = args.radius;
         this.mass = args.mass;
         this.model = args.model;
-        this.RadiusFromSun = args.RadiusFromSun;
         this.SunDeg = args.SunDeg;
+        
+        this.XRadius = args.XRadius;
+        this.ZRadius = args.ZRadius;
+        this.XTilt = args.XTilt;
+        this.ZTilt = args.ZTilt;
+        // Calculate the coords for the ellipse instead of circle
+        
+        
+        /* 
         this.x = 1500 + (this.RadiusFromSun / 5) * Math.cos((this.SunDeg - 90) * (Math.PI/180));
-        this.y = 1500 + (this.RadiusFromSun / 5) * Math.sin((this.SunDeg - 90) * (Math.PI/180));
+        this.z = 1500 + (this.RadiusFromSun / 5) * Math.sin((this.SunDeg - 90) * (Math.PI/180));
+        */
+
+
         // initiate each planet
 
         // draw first frame
@@ -38,14 +52,24 @@ export class Planet {
         var planet:CanvasRenderingContext2D = canvas.getContext("2d");
         var circum:CanvasRenderingContext2D = canvas.getContext("2d");
         
+        // Calculate the coords for the ellipse instead of circle and draw new
+
+        /*
         var ConvertedRadius: number = this.RadiusFromSun / 5;
+        var NewX: number = 1500 + ConvertedRadius * Math.cos((SunDeg - 90) * (Math.PI/180));
+        var NewZ: number = 1500 + ConvertedRadius * Math.sin((SunDeg - 90) * (Math.PI/180));
+        this.x = NewX;
+        this.z = NewZ;
+        */
         circum.beginPath();
-        circum.arc(1500, 1500, ConvertedRadius, 0, 2 * Math.PI);
+        circum.ellipse(1500, 1500, this.XRadius, this.ZRadius, 0, 0, 2 * Math.PI);
         circum.stroke();
 
+        /*
         planet.fillStyle = "#ff0000";
         planet.beginPath();
-        planet.arc(1500 + ConvertedRadius * Math.cos((SunDeg - 90) * (Math.PI/180)), 1500 + ConvertedRadius * Math.sin((SunDeg - 90) * (Math.PI/180)), 5, 0, 2 * Math.PI);
+        planet.arc(NewX, NewZ, 5, 0, 2 * Math.PI);
         planet.fill();
+        */
     }
 }
