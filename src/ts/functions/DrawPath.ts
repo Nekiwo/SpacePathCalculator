@@ -11,7 +11,7 @@ export var DrawPath: Function = (args: any) => {
     let path: CanvasRenderingContext2D = canvas.getContext("2d");
 
     // starting planet point
-    let StartingPoint: number[] = [planets[3].x, planets[3].y];
+    let StartingPoint: number[] = [planets[3].x, planets[3].z];
     // boolean array of planets to wrap
     let WrapPlanets: number[] = [];
     // 2D array of points for the path to wrap around
