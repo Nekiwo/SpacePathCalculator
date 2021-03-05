@@ -22,7 +22,9 @@ export var planets:Planet[] = [
         XRadius: 0,
         ZRadius: 0,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        periapsis: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Mercury",
@@ -30,10 +32,11 @@ export var planets:Planet[] = [
         mass: 0.33,
         model: "",
         SunDeg: 0,
-        XRadius: 57,
-        ZRadius: 57,
+        XRadius: 46,
+        ZRadius: 69,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Venus",
@@ -41,10 +44,11 @@ export var planets:Planet[] = [
         mass: 4.87,
         model: "",
         SunDeg: 0,
-        XRadius: 108,
+        XRadius: 107,
         ZRadius: 108,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Earth",
@@ -52,10 +56,11 @@ export var planets:Planet[] = [
         mass: 5.97,
         model: "",
         SunDeg: 0,
-        XRadius: 149,
-        ZRadius: 149,
+        XRadius: 147,
+        ZRadius: 152,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Mars",
@@ -63,10 +68,11 @@ export var planets:Planet[] = [
         mass: 0.642,
         model: "",
         SunDeg: 0,
-        XRadius: 228,
-        ZRadius: 228,
+        XRadius: 206,
+        ZRadius: 249,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Jupiter",
@@ -74,10 +80,11 @@ export var planets:Planet[] = [
         mass: 1898,
         model: "",
         SunDeg: 0,
-        XRadius: 780,
-        ZRadius: 780,
+        XRadius: 740,
+        ZRadius: 816,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Saturn",
@@ -85,10 +92,11 @@ export var planets:Planet[] = [
         mass: 568,
         model: "",
         SunDeg: 0,
-        XRadius: 1437,
-        ZRadius: 1437,
+        XRadius: 1352,
+        ZRadius: 1514,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Uranus",
@@ -96,10 +104,11 @@ export var planets:Planet[] = [
         mass: 86.8,
         model: "",
         SunDeg: 0,
-        XRadius: 2871,
-        ZRadius: 2871,
+        XRadius: 2741,
+        ZRadius: 3003,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Neptune",
@@ -107,10 +116,11 @@ export var planets:Planet[] = [
         mass: 102,
         model: "",
         SunDeg: 0,
-        XRadius: 4530,
-        ZRadius: 4530,
+        XRadius: 4444,
+        ZRadius: 4545,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     }),
     new Planet({
         name: "Pluto",
@@ -118,12 +128,14 @@ export var planets:Planet[] = [
         mass: 0.0146,
         model: "",
         SunDeg: 0,
-        XRadius: 5900,
-        ZRadius: 5900,
+        XRadius: 4436,
+        ZRadius: 7375,
         XTilt: 0,
-        ZTilt: 0
+        ZTilt: 0,
+        apoapsis: 0
     })
 ];
+// SOURCE: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
 ConfigPrompt.then((config: any) => {
     // Do something when user got prompted about the config
