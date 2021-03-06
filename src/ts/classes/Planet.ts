@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 // Planet class for each planet
 
 // https://solarsystem.nasa.gov/planets/overview/
