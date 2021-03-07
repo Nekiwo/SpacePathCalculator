@@ -45,7 +45,7 @@ export class Planet {
         // draw first frame
         this.DrawPlanet(this.SunDeg);
     }
-    DrawPlanet: Function = (SunDeg: number) => {
+    DrawPlanet: Function = (SunDeg: number = this.SunDeg) => {
         this.SunDeg = SunDeg;
         
         // Draw each planet and path on a canvas element for purely testing/showcase purposes
