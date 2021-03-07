@@ -51,7 +51,7 @@ export class Planet {
         // Draw each planet and path on a canvas element for purely testing/showcase purposes
         // This implemintation does not erase previous frames, and has many other impurities
 
-        // If you want to change the way planets are rendered, for example impliment it all in WebGL, you can do it here
+        // If you want to change the way planets are rendered, you can do it here
 
         var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
         
@@ -66,16 +66,18 @@ export class Planet {
         var NewZ: number = 1500 + this.ZRadius * Math.sin((SunDeg - 90) * (Math.PI/180));
         this.x = NewX;
         this.z = NewZ;
-        //*/
+        /*
         circum.beginPath();
         circum.ellipse(1500, 1500, this.XRadius, this.ZRadius, 0, 0, 2 * Math.PI);
         circum.stroke();
 
-        ///*
         planet.fillStyle = "#ff0000";
         planet.beginPath();
         planet.arc(NewX, NewZ, 5, 0, 2 * Math.PI);
         planet.fill();
-        //*/
+        */
+    }
+    RemovePlanet: Function = () => {
+        // remove planet from the scene
     }
 }
