@@ -16,4 +16,7 @@ export class CamOrigin {
     pos: Function = (vector: string, value: number) => {
         this[vector] = value;
     }
+    angle: Function = (vector: string, value: number) => {
+        this.euler[vector] = value;
+    }
 }
