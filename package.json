@@ -2,10 +2,16 @@
     "name": "spacepathcalculator",
     "devDependencies": {
         "browserify": "^17.0.0",
-        "typescript": "^4.2.2",
-        "copyfiles": "latest"
+        "copyfiles": "latest",
+        "typescript": "^4.2.2"
     },
     "scripts": {
-        "build": "tsc src/ts/index --outDir build/ --target  ESNext --removeComments true --module CommonJS && browserify build/index.js -o build/index.js && copyfiles -f src/index.html build"
+        "build": "tsc src/ts/index --out build/index.js --target  ESNext --removeComments true --module amd --types \"three\" && copyfiles -f src/index.html build"
+    },
+    "dependencies": {
+        "@types/three": "^0.126.0",
+        "amd": "0.0.0",
+        "express": "^4.17.1",
+        "three": "^0.126.1"
     }
 }
