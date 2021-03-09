@@ -2,7 +2,7 @@ import {Planet} from "../classes/Planet";
 // all planets in one array
 
 // NOTE: radius of planets is written in km
-// ANOTHER NOTE: radius of planet's sun orbit is written in millions of km
+// ANOTHER NOTE: radius of planet's sun orbit is written in billions of km
 // ANOTHER ANOTHER NOTE: mass of planets is written in 10^24kg
 export var planets:Planet[] = [
     new Planet({
@@ -24,8 +24,8 @@ export var planets:Planet[] = [
         mass: 0.33,
         model: "",
         SunDeg: 0,
-        XRadius: 46,
-        ZRadius: 69,
+        XRadius: 0.046,
+        ZRadius: 0.069,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -36,8 +36,8 @@ export var planets:Planet[] = [
         mass: 4.87,
         model: "",
         SunDeg: 0,
-        XRadius: 107,
-        ZRadius: 108,
+        XRadius: 0.107,
+        ZRadius: 0.108,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -48,8 +48,8 @@ export var planets:Planet[] = [
         mass: 5.97,
         model: "",
         SunDeg: 0,
-        XRadius: 147,
-        ZRadius: 152,
+        XRadius: 0.147,
+        ZRadius: 0.152,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -60,8 +60,8 @@ export var planets:Planet[] = [
         mass: 0.642,
         model: "",
         SunDeg: 0,
-        XRadius: 206,
-        ZRadius: 249,
+        XRadius: 0.206,
+        ZRadius: 0.249,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -72,8 +72,8 @@ export var planets:Planet[] = [
         mass: 1898,
         model: "",
         SunDeg: 0,
-        XRadius: 740,
-        ZRadius: 816,
+        XRadius: 0.740,
+        ZRadius: 0.816,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -84,8 +84,8 @@ export var planets:Planet[] = [
         mass: 568,
         model: "",
         SunDeg: 0,
-        XRadius: 1352,
-        ZRadius: 1514,
+        XRadius: 1.352,
+        ZRadius: 1.514,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -96,8 +96,8 @@ export var planets:Planet[] = [
         mass: 86.8,
         model: "",
         SunDeg: 0,
-        XRadius: 2741,
-        ZRadius: 3003,
+        XRadius: 2.741,
+        ZRadius: 3.003,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -108,8 +108,8 @@ export var planets:Planet[] = [
         mass: 102,
         model: "",
         SunDeg: 0,
-        XRadius: 4444,
-        ZRadius: 4545,
+        XRadius: 4.444,
+        ZRadius: 4.545,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
@@ -120,8 +120,8 @@ export var planets:Planet[] = [
         mass: 0.0146,
         model: "",
         SunDeg: 0,
-        XRadius: 4436,
-        ZRadius: 7375,
+        XRadius: 4.436,
+        ZRadius: 7.375,
         XTilt: 0,
         ZTilt: 0,
         apoapsis: 0
