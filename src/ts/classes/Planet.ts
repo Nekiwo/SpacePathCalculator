@@ -1,4 +1,4 @@
-/*import * as THREE from "three";
+import * as THREE from "three";
 import {scene} from "../index";
 
 // Planet class for each planet
@@ -57,7 +57,7 @@ export class Planet {
         this.x = NewX;
         this.z = NewZ;
 
-        ///*
+        /*
         var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
         
         var planet:CanvasRenderingContext2D = canvas.getContext("2d");
@@ -70,8 +70,8 @@ export class Planet {
         planet.beginPath();
         planet.arc(NewX, NewZ, 5, 0, 2 * Math.PI);
         planet.fill();
-        //*/
-/*
+        */
+
         let geometry: THREE.TorusGeometry = new THREE.TorusGeometry(this.XRadius);
         let material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0xfff});
         let circum: THREE.Mesh = new THREE.Mesh(geometry, material);
@@ -81,4 +81,4 @@ export class Planet {
     RemovePlanet: Function = () => {
         // remove planet from the scene
     }
-}*/
+}
