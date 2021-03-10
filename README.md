@@ -1,5 +1,5 @@
 # Everything Space!
-A TypeScript project that teaches you everything about space in 10 minutes<br/>
+A TypeScript project that teaches you everything about space<br/>
 
 ## Important
 Currently this project is not completed, no reason to build yet
