@@ -1,9 +1,12 @@
-import * as THREE from "three";
+/*import * as THREE from "three";
+import {scene} from "../index";
 
 // Planet class for each planet
 
+// NOTE for myself: pls edit class
 // https://solarsystem.nasa.gov/planets/overview/
-// pls edit classs
+
+// initiate each planet
 export class Planet {
     name: string;
     radius: number;
@@ -34,48 +37,48 @@ export class Planet {
         // Calculate the coords for the ellipse instead of circle
         
         
-        /*
-        this.x = 1500 + (this.RadiusFromSun / 5) * Math.cos((this.SunDeg - 90) * (Math.PI/180));
-        this.z = 1500 + (this.RadiusFromSun / 5) * Math.sin((this.SunDeg - 90) * (Math.PI/180));
-        */
+        this.x = this.XRadius * Math.cos((this.SunDeg - 90) * (Math.PI/180));
+        this.z = this.ZRadius * Math.sin((this.SunDeg - 90) * (Math.PI/180));
 
-
-        // initiate each planet
 
         // draw first frame
         this.DrawPlanet(this.SunDeg);
     }
-    DrawPlanet: Function = (SunDeg: number) => {
+    DrawPlanet: Function = (SunDeg: number = this.SunDeg) => {
         this.SunDeg = SunDeg;
         
         // Draw each planet and path on a canvas element for purely testing/showcase purposes
         // This implemintation does not erase previous frames, and has many other impurities
+        // If you want to change the way planets are rendered, you can do it here
 
-        // If you want to change the way planets are rendered, for example impliment it all in WebGL, you can do it here
+        // Calculate the coords for the ellipse instead of circle and draw new
+        var NewX: number = this.XRadius * Math.cos((SunDeg - 90) * (Math.PI/180));
+        var NewZ: number = this.ZRadius * Math.sin((SunDeg - 90) * (Math.PI/180));
+        this.x = NewX;
+        this.z = NewZ;
 
+        ///*
         var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("c");
         
         var planet:CanvasRenderingContext2D = canvas.getContext("2d");
         var circum:CanvasRenderingContext2D = canvas.getContext("2d");
-        
-        // Calculate the coords for the ellipse instead of circle and draw new
-
-        ///*
-        //var ConvertedRadius: number = this.RadiusFromSun / 5;
-        var NewX: number = 1500 + this.XRadius * Math.cos((SunDeg - 90) * (Math.PI/180));
-        var NewZ: number = 1500 + this.ZRadius * Math.sin((SunDeg - 90) * (Math.PI/180));
-        this.x = NewX;
-        this.z = NewZ;
-        //*/
         circum.beginPath();
         circum.ellipse(1500, 1500, this.XRadius, this.ZRadius, 0, 0, 2 * Math.PI);
         circum.stroke();
 
-        ///*
         planet.fillStyle = "#ff0000";
         planet.beginPath();
         planet.arc(NewX, NewZ, 5, 0, 2 * Math.PI);
         planet.fill();
         //*/
+/*
+        let geometry: THREE.TorusGeometry = new THREE.TorusGeometry(this.XRadius);
+        let material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0xfff});
+        let circum: THREE.Mesh = new THREE.Mesh(geometry, material);
+        scene.add(circum);
+
     }
-}
+    RemovePlanet: Function = () => {
+        // remove planet from the scene
+    }
+}*/
