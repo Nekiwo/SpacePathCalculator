@@ -1,4 +1,4 @@
-import {planets} from "../data/planets";
+import {planets} from "../data/Planets";
 import {CalcTime} from "./CalcTime";
 
 var BelzierCurve: Function = (args: any) => {
