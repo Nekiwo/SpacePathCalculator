@@ -15,7 +15,6 @@ export var planets:Planet[] = [
         ZRadius: 0,
         XTilt: 0,
         ZTilt: 0,
-        periapsis: 0,
         apoapsis: 0,
         inclination: 0
     }),
