@@ -22,6 +22,7 @@ export class Planet {
     XTilt: number;
     ZTilt: number;
     apoapsis: number;
+    inclination: number;
     constructor(args?: any) {
         this.name = args.name;
         this.radius = args.radius;
@@ -34,6 +35,7 @@ export class Planet {
         this.XTilt = args.XTilt;
         this.ZTilt = args.ZTilt;
         this.apoapsis = args.apoapsis;
+        this.inclination = args.inclination;
         // Calculate the coords for the ellipse instead of circle
         
         
